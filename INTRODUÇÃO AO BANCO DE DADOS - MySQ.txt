@@ -1,0 +1,71 @@
+INTRODUÇÃO AO BANCO DE DADOS - MySQL
+
+
+//CREATE SCHEMA
+CREATE SCHEMA `db_laterx`;
+
+// CREATE TABLE
+CREATE TABLE `tbl_user_cliente` (
+  `id_user` int NOT NULL AUTO_INCREMENT,
+  `name_user_cliente` varchar(255) NOT NULL,
+  `email_user_cliente` varchar(255) NOT NULL,
+  `psswrd_user_cliente` varchar(255) NOT NULL,
+  `phone_user_cliente` varchar(40) NOT NULL,
+  `nascimento_user_cliente` int NOT NULL,
+  PRIMARY KEY (`id_user`)
+)
+
+//SELECT TABLE FROM SCHEMA
+SELECT * FROM db_laterx.tbl_user_cliente;
+
+
+// INSERT DATA FROM TABLE
+INSERT INTO `db_laterx`.`tbl_user_cliente` (
+name_user_cliente,
+    email_user_cliente,
+    psswrd_user_cliente,
+    phone_user_cliente,
+    nascimento_user_cliente
+) VALUES (
+    'jao',
+    'jao@gmail.com',
+    '1234567890987654321',
+    '1234567890',
+    '21012000'
+);
+
+// INSERT DATA FROM TABLE
+INSERT INTO `db_laterx`.`tbl_user_cliente` (
+    name_user_cliente,
+    email_user_cliente,
+    psswrd_user_cliente,
+    phone_user_cliente,
+    nascimento_user_cliente
+) VALUES (
+    'vitor',
+    'vitor@gmail.com',
+    '1234567890987654321',
+    '1234567890',
+    '21012000'
+);
+
+// INSERT DATA FROM TABLE
+INSERT INTO `db_laterx`.`tbl_user_cliente` (
+    name_user_cliente,
+    email_user_cliente,
+    psswrd_user_cliente,
+    phone_user_cliente,
+    nascimento_user_cliente
+) VALUES (
+    './admin',
+    'adimin@gmail.com',
+    '1234567890987654321',
+    '1234567890',
+    '21012000'
+);
+
+// DELETE USER FROM TABLE
+DELETE FROM `db_laterx`.`tbl_user_cliente` WHERE(`id_user` = '2');
+
+// UPDATE USER FROM TABLE
+UPDATE `db_laterx`.`tbl_user_cliente` SET `name_user_cliente` = 'vitor', `email_user_cliente` = 'vitor@gmail.com' WHERE(`id_user`= '3')
